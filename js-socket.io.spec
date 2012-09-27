@@ -58,6 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_appdir},%{_examplesdir}/%{name}-%{version}}
 cp -p dist/%{plugin}.min.js $RPM_BUILD_ROOT%{_appdir}/%{plugin}-%{version}.min.js
 cp -p dist/%{plugin}.js $RPM_BUILD_ROOT%{_appdir}/%{plugin}-%{version}.js
+ln -s %{plugin}-%{version}.js $RPM_BUILD_ROOT%{_appdir}/%{plugin}.src.js
 ln -s %{plugin}-%{version}.min.js $RPM_BUILD_ROOT%{_appdir}/%{plugin}.js
 
 cp -p dist/*.swf  $RPM_BUILD_ROOT%{_appdir}
